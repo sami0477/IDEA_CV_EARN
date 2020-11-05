@@ -64,7 +64,18 @@ router.put('/:id', (req, res) => {
     });
 });
 
-
+// --------------------- Delete ----------------------
+// Delete
+router.delete('/:id', (req, res) => {
+        Resume.findByIdAndRemove(req.params.id, (err, removeResume) => {
+            if (err) {
+                res.redirect('back');
+            } else {
+                // Redirect
+                res.redirect('/users/cv');
+            }
+        });
+    });
 
 
 

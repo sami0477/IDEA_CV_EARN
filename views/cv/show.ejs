@@ -1,6 +1,10 @@
 <h1>Show Specific CV</h1>
-<pre>
-    <a href="/users/cv/<%= resume.id %>/edit">Edit</a>
+<a  class="btn btn-warning rounded-pill shadow" href="/users/cv/<%= resume.id %>/edit">Edit</a>
 
+<form class="d-inline p-2" action="/users/cv/<%= resume._id %>?_method=DELETE" method="POST">
+    <button class="btn btn-danger rounded-pill shadow" >Delete</button>
+</form>
+
+<pre>
     <%= resume %>
 </pre>
