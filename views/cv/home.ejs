@@ -1,0 +1,27 @@
+<h1>Welcome, User!</h1>
+
+<a class="btn btn-primary" href="/users/cv/new" target="_blank">Create New</a>
+<br>
+<br>
+<div class="row">
+
+    <% for(let i = 1; i < resume.length; i++){ %>
+        
+        <div class="col-6 jumbotron">
+                <b>Date: </b><%= resume[i].created %> <br>  
+                <b>Name: </b><%= resume[i].cv_name %> <br>  
+                <b>Image: </b><%= resume[i].image %> <br>    
+                <b>Date Of Birth: </b><%= resume[i].dob %> <br> 
+                <b>Number: </b><%= resume[i].number %> <br> 
+                <b>Email: </b><%= resume[i].email %> <br>   
+                <b>About Me: </b><%= resume[i].bio %> <br>  
+                <b>Experience: </b><%= resume[i].experience %> <br> 
+                <b>Education: </b><%= resume[i].education %> <br>   
+                <b>Skills: </b><%= resume[i].skills %> <br> 
+                <b>Languages: </b><%= resume[i].languages %> <br>   
+                <b>Interests: </b><%= resume[i].interests %> <br>   
+                <b>Certifications: </b><%= resume[i].certifications %> <br> 
+        </div>
+        
+    <% } %>    
+</div>

@@ -1,0 +1,82 @@
+<div class="container">
+    
+    <h1>Create New CV</h1>
+    <form action="/users/cv" method="post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-3">
+                    <label for= "cv_name">Name</label>
+                    <input name="resume[cv_name]" type="text" class="form-control">
+                </div>
+                <div class="col-3">
+                    <label for= "dob">Date of Birth</label>
+                    <input name="resume[dob]" type="date" class="form-control">
+                </div>
+                <div class="col-3">
+                    <label for= "number">Mobile Number</label>
+                    <input name="resume[number]" type="tel" class="form-control">
+                </div>
+                <div class="col-3">
+                    <label for= "email">Email</label>
+                    <input name="resume[email]" type="email" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for= "address">Address</label>
+            <input name="resume[address]" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for= "bio">About Me</label> <br>
+            <textarea name="resume[bio]"></textarea>
+        </div>
+        <div class="form-group">
+            <label for= "experience">Experience</label>
+            <input name="resume[experience]" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for= "education">Education</label>
+            <input name="resume[education]" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-4">
+                    <label for= "skills">Skills</label>
+                    <input name="resume[skills]" type="text" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label for= "languages">Languages</label>
+                    <input name="resume[languages]" type="text" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label for= "interests">Interests</label>
+                    <input name="resume[interests]" type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-9">
+                    <label for= "certifications">Certifications</label>
+                    <input name="resume[certifications]" type="text" class="form-control">
+                </div>
+                <div class="col-3">
+                    <label for= "image">Image</label>
+                    <input name="resume[image]" type="file" class="btn form-control">
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+               
+        <div class="form-group">
+            <input name="submit" type="submit" class="btn btn-primary form-control">
+        </div>         
+ 
+    </form>
+        
+</div>
