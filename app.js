@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const methodOverride = require('method-override');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
@@ -33,7 +34,7 @@ app.use(passport.session());
 // Connect Flash Middleware
 app.use(flash());
 // Method Override Middleware
-app.use(express('_method'));
+app.use(methodOverride('_method'));
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 

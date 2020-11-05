@@ -32,4 +32,40 @@ router.post('/', (req, res) => {
         }
     });
 });
+// --------------------- Show ----------------------
+router.get('/:id', (req, res) => {
+    Resume.findById(req.params.id, (err, foundResume) => {
+        if(err){
+            res.redirect('/users/cv');
+        } else {
+            res.render('cv/show', {resume: foundResume});
+        }
+    });
+});
+// --------------------- Edit ----------------------
+router.get('/:id/edit', (req, res) => {
+    Resume.findById(req.params.id, (err, foundResume) => {
+        if(err){
+            res.redirect('back');
+        } else{
+            res.render('cv/edit', {resume: foundResume});
+        }
+    });
+});
+// --------------------- Update ----------------------
+router.put('/:id', (req, res) => {
+    // req.body.blog.body = req.sanitize(req.body.blog.body);
+    Resume.findByIdAndUpdate(req.params.id, req.body.resume, (err, updatedResume) => {
+        if(err){
+            res.redirect('back');
+        } else {
+            res.redirect('/users/cv/' + req.params.id)
+        }
+    });
+});
+
+
+
+
+
 module.exports = router;
