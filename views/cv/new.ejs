@@ -60,13 +60,21 @@
 
         <div class="form-group">
             <div class="row">
-                <div class="col-9">
+                <div class="col-8">
                     <label for= "certifications">Certifications</label>
                     <input name="resume[certifications]" type="text" class="form-control">
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <label for= "image">Image</label>
-                    <input name="resume[image]" type="file" class="btn form-control">
+                    <!-- <input name="resume[image]" type="file" class="btn form-control"> -->
+                    <!-- FILE -->
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>;
+                            <input name="resume[image]" type="file" class="custom-file-input" id="inputGroupFile02">
+                        </div>
+                    </div>
+                    <!-- File -->
                 </div>
             </div>
         </div>
